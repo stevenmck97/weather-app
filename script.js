@@ -30,12 +30,12 @@ function displayWeather(weatherData) {
     const wind = document.querySelector("#wind");
     const humidity = document.querySelector("#humidity");
 
-    weatherDescription.textContent = weatherData.weather[0].description;
-    location.textContent = weatherData.name;
-    temp.textContent = weatherData.main.temp;
-    feelsLikeTemp.textContent = weatherData.main.feels_like;
-    wind.textContent = weatherData.wind.speed;
-    humidity.textContent = weatherData.main.humidity;
+    weatherDescription.textContent = `${weatherData.weather[0].description}`;
+    location.textContent = `${weatherData.name}`;
+    temp.textContent = `Temperature: ${weatherData.main.temp}°C`;
+    feelsLikeTemp.textContent = `Feels like: ${weatherData.main.feels_like}°C`;
+    wind.textContent = `Wind: ${weatherData.wind.speed} km/h`;
+    humidity.textContent = `Humidity: ${weatherData.main.humidity}%`;
 
     weatherDisplay.appendChild(weatherDescription);
     weatherDisplay.appendChild(location);
