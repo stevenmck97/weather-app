@@ -6,7 +6,7 @@ searchBtn.addEventListener("click", getUserLocationInput);
 async function getWeather(location) {
     try {
         const response = await fetch(
-            `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${weather_key}`
+            `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=${weather_key}`
         );
         const weatherData = await response.json();
         displayWeather(weatherData);
@@ -30,7 +30,7 @@ function displayWeather(weatherData) {
     const wind = document.querySelector("#wind");
     const humidity = document.querySelector("#humidity");
 
-    weatherDescription.textContent = weatherData.weather.description;
+    weatherDescription.textContent = weatherData.weather[0].description;
     location.textContent = weatherData.name;
     temp.textContent = weatherData.main.temp;
     feelsLikeTemp.textContent = weatherData.main.feels_like;
