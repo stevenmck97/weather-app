@@ -1,4 +1,7 @@
-let weather_key = "fb816687cdd3a3eee52c07f94ccb480d";
+const weather_key = "fb816687cdd3a3eee52c07f94ccb480d";
+const locationInput = document.querySelector("#locationSearch");
+const searchBtn = document.querySelector("#searchBtn");
+searchBtn.addEventListener("click", getUserLocationInput);
 
 async function getWeather(location) {
     try {
@@ -12,4 +15,7 @@ async function getWeather(location) {
     }
 }
 
-getWeather("london");
+function getUserLocationInput() {
+    let location = locationInput.value;
+    getWeather(location);
+}

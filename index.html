@@ -8,5 +8,26 @@
         <script src="script.js" defer></script>
         <title>Weather App</title>
     </head>
-    <body></body>
+    <body>
+        <div class="container">
+            <div id="search">
+                <label for="locationSearch">Search Location</label>
+                <input
+                    type="search"
+                    name="locationSearch"
+                    id="locationSearch"
+                />
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <div class="weatherDisplay">
+                <p id="weatherDescription">Cloudy</p>
+                <p id="location">London</p>
+                <p id="temp">16</p>
+                <p id="feelsLikeTemp">15</p>
+                <p id="wind">20</p>
+                <p id="humidity">30</p>
+            </div>
+        </div>
+    </body>
 </html>
